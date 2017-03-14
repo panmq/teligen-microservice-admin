@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: teligen-microservice-admin
+#  jackson:
+#    serialization: 
+#      INDENT_OUTPUT: true
+server:
+  port: 8085
+logging:
+  file: /tmp/${spring.application.name}.log
+management:
+  security:
+    enabled: false
+endpoints:
+  health:
+    sensitive: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/ 
